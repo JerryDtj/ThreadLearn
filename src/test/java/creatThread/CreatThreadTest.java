@@ -1,6 +1,4 @@
-import creatThread.CallableAndFutureTask;
-import creatThread.ThreadExtend;
-import creatThread.ThreadImpl;
+package creatThread;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
