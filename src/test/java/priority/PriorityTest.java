@@ -1,3 +1,5 @@
+package priority;
+
 import priority.ThreadA;
 import priority.ThreadB;
 import priority.ThreadC;
