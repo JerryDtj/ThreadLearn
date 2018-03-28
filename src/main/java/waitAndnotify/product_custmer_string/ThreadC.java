@@ -1,4 +1,4 @@
-package waitAndnotify.product_custmer;
+package waitAndnotify.product_custmer_string;
 
 public class ThreadC implements Runnable {
     private  Custmer custmer;
