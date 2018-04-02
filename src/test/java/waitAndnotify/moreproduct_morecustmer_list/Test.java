@@ -1,4 +1,4 @@
-package waitAndnotify.moreproduct_onecustmer_list;
+package waitAndnotify.moreproduct_morecustmer_list;
 
 import waitAndnotify.oneproduct_twocustmer_list.C;
 import waitAndnotify.oneproduct_twocustmer_list.MyStack;
@@ -16,6 +16,10 @@ public class Test {
         P p4 = new P(myStack);
         P p5 = new P(myStack);
         C r1 = new C(myStack);
+        C r2 = new C(myStack);
+        C r3 = new C(myStack);
+        C r4 = new C(myStack);
+        C r5 = new C(myStack);
         ThreadP threadP1 = new ThreadP(p1);
         ThreadP threadP2 = new ThreadP(p2);
         ThreadP threadP3 = new ThreadP(p3);
@@ -28,8 +32,15 @@ public class Test {
         threadP5.start();
 
         ThreadC c1 = new ThreadC(r1);
+        ThreadC c2 = new ThreadC(r2);
+        ThreadC c3 = new ThreadC(r3);
+        ThreadC c4 = new ThreadC(r4);
+        ThreadC c5 = new ThreadC(r5);
         c1.start();
-
+        c2.start();
+        c3.start();
+        c4.start();
+        c5.start();
 
 
     }
