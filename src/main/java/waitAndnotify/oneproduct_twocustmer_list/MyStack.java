@@ -9,31 +9,33 @@ public class MyStack {
 
     public synchronized void push(){
         try {
-            if (list.size()>=1){
-                System.out.println("push wait");
+            while (list.size()==1){
                 this.wait();
             }
-            String s = System.currentTimeMillis()+"-"+System.nanoTime();
-            System.out.println("add i["+s+"]");
-            list.add(s);
+            list.add("anyString="+Math.random());
             this.notify();
+            System.out.println("push="+list.size());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    public synchronized void pop(){
+    public synchronized String pop(){
+        String returnValue="";
         try {
             if (list.size()==0){
-                System.out.println("pop wait");
+                System.out.println("pop操作中的："+Thread.currentThread().getName()+"线程呈wait状态");
                 this.wait();
             }
             System.out.println("pop i["+list.get(0)+"]");
+            returnValue = list.get(0);
             list.remove(0);
             this.notify();
+            System.out.println("pop="+list.size());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        return returnValue;
     }
 
 

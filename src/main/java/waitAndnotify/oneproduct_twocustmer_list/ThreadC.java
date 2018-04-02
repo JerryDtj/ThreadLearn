@@ -1,16 +1,16 @@
 package waitAndnotify.oneproduct_twocustmer_list;
 
-public class ThreadP extends Thread{
-    private P p;
+public class ThreadC extends Thread{
+    private C r;
 
-    public ThreadP(P p){
-        this.p = p;
+    public ThreadC(C r){
+        this.r = r;
     }
 
     @Override
     public void run() {
         while (true){
-            p.pushService();
+            r.popService();
         }
     }
 }
