@@ -13,8 +13,9 @@ public class QueueLength implements Runnable {
             reentrantLock.lock();
             System.out.println("threadName="+Thread.currentThread().getName()+" in");
             Thread.sleep(5000);
-        } catch (InterruptedException e) {
+        }catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 }
+
