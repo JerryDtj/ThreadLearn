@@ -11,5 +11,13 @@ public class Run {
         Thread t2 = new Thread(new ThreadB(service));
         t2.start();
 
+        Thread t3 = new Thread(new ThreadWrite(service));
+        t3.start();
+
+        Thread t4 = new Thread(new ThreadWrite2(service));
+        t4.start();
+
+
+
     }
 }

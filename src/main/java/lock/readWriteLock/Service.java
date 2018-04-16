@@ -16,4 +16,16 @@ public class Service{
             lock.readLock().unlock();
         }
     }
+
+    public void write(){
+        try {
+            lock.writeLock().lock();
+            System.out.println("readLock start"+ Thread.currentThread().getName()+" "+System.currentTimeMillis());
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            lock.writeLock().unlock();
+        }
+    }
 }
